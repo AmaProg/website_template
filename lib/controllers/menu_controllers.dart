@@ -30,6 +30,8 @@ class MenuController extends GetxController {
         return _CustomIcon(Icons.trending_up, itemName);
       case DriverPageRoute:
         return _CustomIcon(Icons.drive_eta, itemName);
+      case AuthenticationPageRoute:
+        return _CustomIcon(Icons.dashboard, itemName);
       default:
         return _CustomIcon(Icons.exit_to_app, itemName);
     }
@@ -40,13 +42,13 @@ class MenuController extends GetxController {
       return Icon(
         icon,
         size: 22,
-        color: darke,
+        color: dark,
       );
     }
 
     return Icon(
       icon,
-      color: isHovering(itemName) ? darke : lightGrey,
+      color: isHovering(itemName) ? dark : lightGrey,
     );
   }
 }
