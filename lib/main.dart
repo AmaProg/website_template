@@ -3,10 +3,13 @@ import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:website_template/controllers/menu_controllers.dart';
+import 'package:website_template/controllers/navigation_controller.dart';
 import 'package:website_template/layout.dart';
+import 'package:website_template/pages/authentification/authentification.dart';
 
 void main() {
   Get.put(MenuController());
+  Get.put(NavigationController());
   runApp(const MyApp());
 }
 
@@ -27,7 +30,7 @@ class MyApp extends StatelessWidget {
             TargetPlatform.android: FadeUpwardsPageTransitionsBuilder()
           }),
           primaryColor: Colors.blue),
-      home: SiteLayout(),
+      home: AuthenticationPage(),
     );
   }
 }
